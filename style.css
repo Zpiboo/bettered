@@ -23,7 +23,12 @@ html, body {
 
 /* Navbar style */
 .navbar {
+    position: fixed;
+
+    width: 100%;
     display: flex;
+
+    z-index: 5;
 
     align-items: center;
     justify-content: center;
@@ -87,24 +92,56 @@ html, body {
 }
 
 /* Login Pop Up */
+
+.popup-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 9;
+
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(63, 63, 63, 0.548);
+}
+
+
 .popup {
     position: absolute;
     z-index: 10;
 
-    padding: 30px;
-
+    /* center */
+    padding: 0 50px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
+    /* div properties */
     width: 70%;
     max-width: 700px;
     height: 90%;
-    max-height: 600px;
+    max-height: 500px;
+    background: linear-gradient(135deg, #c3c3c3, #979797);
 
-    background: rgb(184, 184, 184);
-
+    /* border */
     border-radius: 30px;
+
+    /* shadow */
+    box-shadow: 0 0 30px -5px black;
+}
+
+.popup > input[type=text],
+.popup > input[type=password] {
+    width: 250px;
+    height: 40px;
+
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+    padding: 5px;
+
+    font-size: inherit;
 }
 
 
